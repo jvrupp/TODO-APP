@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    
+    <div id = App>
+    <div id=Titulo><h3>TESTE<h3></div>
+    
+        <div id=div>
+
+        </div>
+
+<div id=barraComandos>
+  <button id=btn>adicionar</button>
+  <input id=inpt type="text" value="Escreva Aqui">
+</div>
+    </div>    
+    
+
+    
+
+    <script >
+      var paragrafo;
+      var botao=document.getElementById("btn")
+      var textoParagrafo;
+      var inpute = document.getElementById("inpt")
+      var div=document.getElementById("div")
+      var botao;
+      var textoBotao;
+      var i=0;
+      var w=0;
+      var textoExcluir ="Excluir"
+
+function gerarTexto(){
+  paragrafo=document.createElement("p")
+  textoParagrafo=document.createTextNode(inpute.value)
+  paragrafo.setAttribute("id","paragrafo"+i)
+  paragrafo.appendChild(textoParagrafo)
+  div.append(paragrafo)
+  i++
+  }
+function gerarExcluir(){
+  ancora=document.createElement("a")
+  textoAncora=document.createTextNode(textoExcluir)
+  ancora.setAttribute("href","#")
+  ancora.setAttribute("id","ancora"+w)
+  ancora.addEventListener("click",remover)
+  ancora.appendChild(textoAncora)
+  div.append(ancora)
+  w++
+  }
+function remover(){
+  console.log(this.id)
+this.remove()
+var numID =this.id.slice(6)
+console.log(numID)
+var txtParagrafo = document.getElementById("paragrafo"+numID)
+txtParagrafo.remove()
+}
+
+
+
+
+
+
+botao.addEventListener("click",gerarTexto)
+botao.addEventListener("click",gerarExcluir)
+
+
+    </script>
+  </body>
+</html>

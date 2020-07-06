@@ -1,0 +1,26 @@
+#div {
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  color:black
+}
+
+#Titulo {
+  width: 500px;
+  margin: auto;
+  border: 1px solid black;
+  text-align: center;
+  background-color:#ff9b7a
+}
+#barraComandos {
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  background-color:#ffae93
+}
+#App {
+  width: 500px;
+  margin: auto;
+  text-align: center;
+  background-color:#ffcab5
+}
